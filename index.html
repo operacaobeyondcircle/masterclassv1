@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="theme-color" content="#f7f6f2"/>
 <meta name="description" content="Masterclass Arquitetura do Sucesso™ com Barbara Bacchi. Encontre o que está entre seu potencial e o negócio e a vida que deseja construir."/>
-<title>Prévia · Página de obrigado | Masterclass Arquitetura do Sucesso™</title>
+<title>Masterclass Arquitetura do Sucesso™ | Barbara Bacchi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Caveat:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -121,7 +121,7 @@
  * grupoVipUrl deve ser o convite HTTPS oficial do Grupo VIP.
  * Para a prévia visual sem enviar inscrição, use ?preview=obrigado
  */
-const CONFIG={webhookUrl:'',grupoVipUrl:''};
+const CONFIG={webhookUrl:'',grupoVipUrl:'https://chat.whatsapp.com/DFgGn1ONfssC59BguDyjgB'};
 const $=id=>document.getElementById(id);
 function activateThanks(preview=false){
  $('landing').hidden=true;$('thankyou').hidden=false;$('previewWarning').hidden=!preview;
@@ -138,7 +138,7 @@ function activateLanding(){
 $('topCta').addEventListener('click',e=>{if(!$('thankyou').hidden){e.preventDefault();activateLanding();}});
 $('backToLanding').addEventListener('click',activateLanding);
 $('vipLink').addEventListener('click',e=>{if($('vipLink').getAttribute('aria-disabled')==='true')e.preventDefault();});
-activateThanks(true);
+if(new URLSearchParams(location.search).get('preview')==='obrigado')activateLanding();
 const leadForm=$('leadForm');
 leadForm.addEventListener('submit',async e=>{
  e.preventDefault();let status=$('feedback'),btn=$('submitLead');status.textContent='';

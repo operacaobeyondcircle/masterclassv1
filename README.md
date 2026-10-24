@@ -20,6 +20,8 @@ const CONFIG = {
 
 `webhookUrl` deve aceitar `POST` com JSON e permitir CORS a partir do domínio publicado. `grupoVipUrl` deve ser o convite HTTPS oficial do Grupo VIP. Não coloque tokens, chaves privadas ou credenciais neste ficheiro.
 
+Se `webhookUrl` estiver vazio, o formulário continua a validar os campos e abre a página de obrigado, mas nenhum dado é enviado ou guardado. Quando o webhook for configurado, o mesmo botão passa a enviar o lead antes de abrir a confirmação.
+
 A página abre inicialmente no modo visual de obrigado. Para voltar ao fluxo de inscrição, use o botão “Voltar à inscrição”. O parâmetro `?preview=obrigado` é mantido como referência de pré-visualização.
 
 ## Deploy na Vercel

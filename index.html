@@ -816,23 +816,31 @@ strong,b{font-weight:600}
 </style><!-- TrackServer Hub - instalação first-party -->
 <script>
   (function(t,s){
-    window.TS=window.TS||function(){(TS.q=TS.q||[]).push(arguments)};
-    TS('init','f9d2e05c-7214-40ff-9fbc-dcdc3cbe273c',{ pixelId:'', endpoint:'https://s.api.wapptrack.com.br' });
-    var j=document.createElement('script');j.async=1;
-    j.src='https://s.api.wapptrack.com.br/t.js?id=f9d2e05c-7214-40ff-9fbc-dcdc3cbe273c';document.head.appendChild(j);
-  })();
+    function init(){
+      window.TS=window.TS||function(){(TS.q=TS.q||[]).push(arguments)};
+      TS('init','f9d2e05c-7214-40ff-9fbc-dcdc3cbe273c',{ pixelId:'', endpoint:'https://s.api.wapptrack.com.br' });
+      var j=document.createElement('script');j.async=1;
+      j.src='https://s.api.wapptrack.com.br/t.js?id=f9d2e05c-7214-40ff-9fbc-dcdc3cbe273c';document.head.appendChild(j);
+    }
+    if('requestIdleCallback' in window) requestIdleCallback(init,{timeout:2000});
+    else window.addEventListener('load',function(){setTimeout(init,0)},{once:true});
+  })(window, document);
 </script>
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        function init(){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        }
+        if('requestIdleCallback' in window) requestIdleCallback(init,{timeout:2000});
+        else window.addEventListener('load',function(){setTimeout(init,0)},{once:true});
     })(window, document, "clarity", "script", "z5xv7inxbn");
 </script>
 </head>
 <body><a class="skip-link" href="#heroTitle" id="skipToContent">Ir para o conteúdo principal</a>
 <div class="event-strip" role="note"><div class="wrap event-strip-inner"><span><b>14 NOV · 2026</b>   MASTERCLASS AO VIVO E ONLINE</span><span>A ÚNICA EDIÇÃO AO VIVO DESTE ANO</span></div></div><header class="masthead"><div class="wrap masthead-row">
-<img alt="(B)eyond Circle — identidade, negócio, autoridade, vida" class="brand-art" decoding="async" fetchpriority="high" height="420" src="assets/asset-04.webp" width="1050"/>
+<img alt="(B)eyond Circle — identidade, negócio, autoridade, vida" class="brand-art" decoding="async" fetchpriority="high" height="420" src="assets/asset-04.webp" srcset="assets/asset-04-420w.webp 420w, assets/asset-04.webp 1050w" sizes="(max-width:700px) 180px, 340px" width="1050"/>
 <div class="masthead-aside"><span>14 NOVEMBRO · EDIÇÃO ÚNICA AO VIVO EM 2026</span><a aria-controls="leadModal" aria-haspopup="dialog" data-open-lead="" href="#oferta" id="topCta">Quero participar</a></div>
 </div></header>
 <main id="landing">
@@ -847,7 +855,7 @@ strong,b{font-weight:600}
 <a class="btn bx-btn" href="#oferta">Quero construir meu próximo nível <span aria-hidden="true">→</span></a>
 <p class="bx-micro">Ao vivo R$ 97  ·  Ao vivo + gravação R$ 147  ·  Workbook e plano de 7 dias</p>
 </div>
-<div class="hero-art hero-photo-first"><picture><source media="(max-width:700px)" srcset="assets/asset-05.webp"/><img alt="Barbara Bacchi sentada em uma poltrona de couro, com blazer vermelho, diante de um traço artístico em B" decoding="async" fetchpriority="high" height="920" loading="eager" src="assets/asset-06.webp" width="744"/></picture></div>
+<div class="hero-art hero-photo-first"><picture><source media="(max-width:700px)" srcset="assets/asset-05-480w.webp 480w, assets/asset-05.webp 740w" sizes="100vw"/><img alt="Barbara Bacchi sentada em uma poltrona de couro, com blazer vermelho, diante de um traço artístico em B" decoding="async" fetchpriority="high" height="920" loading="eager" src="assets/asset-06.webp" srcset="assets/asset-06-480w.webp 480w, assets/asset-06.webp 744w" sizes="(max-width:700px) 100vw, 50vw" width="744"/></picture></div>
 </div>
 </section>
 <div aria-label="Experiência de Barbara Bacchi" class="bx-proof-band"><div class="wrap bx-proof-grid"><div><strong>120+</strong><span>negócios e projetos construídos</span></div><div><strong>R$ 3 bi</strong><span>em VGV projetado</span></div><div><strong>80+</strong><span>mentoradas</span></div><div><strong>16 anos</strong><span>de trajetória empresarial</span></div></div></div>
@@ -864,7 +872,7 @@ strong,b{font-weight:600}
 </div>
 <p class="bx-editorial-conclusion">O problema não é que você sabe pouco. <em>É que tudo o que você sabe ainda não trabalha junto.</em></p>
 </div></section>
-<section aria-labelledby="manifestoTitle" class="bx-section bx-manifesto"><div class="wrap bx-manifesto-layout"><div><div class="bx-section-label bx-label-light"><span>02 / A NOVA PERSPECTIVA</span></div><h2 class="bx-title" id="manifestoTitle">Seu potencial não precisa de mais esforço.<em>Precisa de arquitetura.</em></h2><p>Talento sem diferenciação pode se tornar commodity. Experiência sem uma tese própria vira currículo. Autoridade sem modelo econômico vira visibilidade. E crescimento sem liberdade pode se transformar em outra prisão.</p><p><strong>O Beyond conecta as peças que o mercado ensina separadas.</strong></p></div><div class="bx-manifesto-quote"><img alt="" aria-hidden="true" class="bx-bmark" src="assets/asset-07.webp"/ width="415 height="296"<blockquote>Você é o ativo.<br/>Sua trajetória é o repertório.<br/><em>Seu negócio precisa ser a arquitetura.</em></blockquote><span>IDENTIDADE · NEGÓCIO · AUTORIDADE · VIDA</span></div></div></section>
+<section aria-labelledby="manifestoTitle" class="bx-section bx-manifesto"><div class="wrap bx-manifesto-layout"><div><div class="bx-section-label bx-label-light"><span>02 / A NOVA PERSPECTIVA</span></div><h2 class="bx-title" id="manifestoTitle">Seu potencial não precisa de mais esforço.<em>Precisa de arquitetura.</em></h2><p>Talento sem diferenciação pode se tornar commodity. Experiência sem uma tese própria vira currículo. Autoridade sem modelo econômico vira visibilidade. E crescimento sem liberdade pode se transformar em outra prisão.</p><p><strong>O Beyond conecta as peças que o mercado ensina separadas.</strong></p></div><div class="bx-manifesto-quote"><img alt="" aria-hidden="true" class="bx-bmark" src="assets/asset-07.webp" width="415" height="296"/><blockquote>Você é o ativo.<br/>Sua trajetória é o repertório.<br/><em>Seu negócio precisa ser a arquitetura.</em></blockquote><span>IDENTIDADE · NEGÓCIO · AUTORIDADE · VIDA</span></div></div></section>
 <section aria-labelledby="methodTitle" class="bx-section bx-method" id="metodo"><div class="wrap">
 <div class="bx-section-label"><span>03 / O DIFERENCIAL DO MÉTODO</span><span>SELF ARCHITECTURE™</span></div>
 <div class="bx-two-up bx-head-split"><h2 class="bx-title" id="methodTitle">Não é sobre parecer diferente.<em>É sobre construir algo que só você poderia construir.</em></h2><div><p class="bx-lead">A Arquitetura do Sucesso parte de uma pergunta que a maior parte das mentorias de negócio ignora: <strong>qual é o valor singular que já existe na sua trajetória — e como ele pode se tornar a origem de um negócio?</strong></p><p>Em vez de começar pelo algoritmo, pelo produto da moda ou por uma fórmula de vendas, começamos pela sua visão e pela transformação que você sabe gerar.</p></div></div>
@@ -897,7 +905,7 @@ strong,b{font-weight:600}
 </div><p class="bx-journey-end">Você não precisa esperar 2027 para começar a construir o próximo capítulo da sua vida.</p></div></section>
 <section aria-labelledby="audienceTitle" class="bx-section bx-audience"><div class="wrap bx-audience-layout"><div><div class="bx-section-label"><span>PARA QUEM É</span></div><h2 class="bx-title" id="audienceTitle">Para mulheres que já fizeram muito.<em>E sabem que podem construir mais.</em></h2><p>Empresárias, profissionais e especialistas com trajetória, conhecimento, clientes ou resultados — mas que sentem que o negócio ainda não traduz o próprio potencial.</p></div><div class="bx-audience-list"><div><span>✓</span><p>Quer deixar de ser apenas excelente para construir <strong>uma posição de referência.</strong></p></div><div><span>✓</span><p>Deseja ser reconhecida pela <strong>própria visão de mercado</strong>, não apenas por um cargo ou serviço.</p></div><div><span>✓</span><p>Quer um negócio que valorize seu repertório e tenha <strong>mais potencial de lucro.</strong></p></div><div><span>✓</span><p>Não quer trocar crescimento por ausência: busca <strong>tempo, autonomia e liberdade de escolha.</strong></p></div><div><span>✓</span><p>Está disposta a colocar o próprio negócio na mesa e <strong>tomar decisões, não só consumir conteúdo.</strong></p></div></div></div></section>
 <section aria-labelledby="founderTitle" class="ed-founder" id="barbara"><div class="wrap ed-founder-grid">
-<figure class="ed-portrait"><div class="ed-portrait-frame"><img alt="Barbara Bacchi na Avenida Paulista, em fotografia editorial em preto e branco" decoding="async" height="1200" loading="lazy" src="assets/asset-08.webp" width="800"/></div>
+<figure class="ed-portrait"><div class="ed-portrait-frame"><img alt="Barbara Bacchi na Avenida Paulista, em fotografia editorial em preto e branco" decoding="async" height="1200" loading="lazy" src="assets/asset-08.webp" srcset="assets/asset-08-520w.webp 520w, assets/asset-08.webp 800w" sizes="(max-width:700px) 90vw, 520px" width="800"/></div>
 <span aria-hidden="true" class="ed-note ed-note--top">16 anos construindo negócios</span>
 <span aria-hidden="true" class="ed-note ed-note--side">mãe · casada há 13 anos · São Paulo</span>
 <span aria-hidden="true" class="ed-note ed-note--bottom">a maior obra é outra pessoa →</span>

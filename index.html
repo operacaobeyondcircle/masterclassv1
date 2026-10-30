@@ -240,6 +240,17 @@ body.modal-open{overflow:hidden}
  .hero-v10 h1.hero-headline-v11{font-size:clamp(22px,7.3vw,33px);line-height:1.12;letter-spacing:-.052em;margin-bottom:16px;}
 }
 #oferta{scroll-margin-top:24px}
+
+/* Contrast fix: the purchase card has a light surface, so its copy must stay dark. */
+.bx-purchase-card .bx-price,
+.bx-purchase-card .bx-price strong,
+.bx-purchase-card .bx-ticket-top strong,
+.bx-purchase-card .bx-ticket-top b{color:#171412!important}
+.bx-purchase-card .bx-card-help,
+.bx-purchase-card .bx-ticket-content small,
+.bx-purchase-card .bx-security,
+.bx-purchase-card .bx-price-small{color:#514943!important}
+.bx-purchase-card .bx-price-small{border-top-color:#c9c0b8}
 </style>
 <style>\n/* V9: accessibility, mobile usability, performance and focus polish */
 [hidden]{display:none!important}
